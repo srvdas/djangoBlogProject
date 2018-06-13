@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Souravs Blog</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'personal/css/animate.min.css' %}" type = "text/css"/>
+	
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%;
+        
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#666">
+	<div class="container" style="max-width: 900px; height: auto; margin: 3rem auto; padding: 30px;  background-color: #B6C6FF; box-shadow: 30px 0px 40px rgba(0 ,0 ,0 , 0.2),-30px 0px 40px rgba(0 ,0 ,0 , 0.2)">
+		<div class="row">
+			  <div class="col-sm-2">
+			  <center>
+					<img src="{% static 'personal/image/prfl.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
+					</center>
+			  </div>
+			  <div class="col-sm-10">
+				  <h4 style="padding-top: 2.5rem;; text-align: center;">Programming, Teaching, Entrepreneurship</h4>
+			  </div>
+		</div>
+
+		
+		<ul style="padding: .5rem; border: 1px #333 solid; box-shadow: 30px 0px 40px rgba(0 ,0 ,0 , 0.2),-30px 0px 40px rgba(0 ,0 ,0 , 0.2); background-color: #333; border-radius: 10px;" class="nav nav-tabs" id="myTab" role="tablist">
+       <li class="nav-item">
+           <a class="nav-link active animated slideInRight" id="home-tab" data-toggle="tab" href='/' role="tab" aria-controls="home" aria-selected="true">Home</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link animated slideInLeft" id="profile-tab" data-toggle="tab" href='/blog/' role="tab" aria-controls="profile" aria-selected="false">Blog</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link animated slideInRight" id="contact-tab" data-toggle="tab" href='/contact/' role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+       </li>
+   </ul>
+                  <!-- Inser content here -->
+                 <div class='container-fluid animated zoomIn'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}	
+			</div> <hr>
+			<footer style="">
+		<div class="container-fluid">
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+	</footer>
+   </div>
+		
+	
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>me SRV</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'personal/css/animate.min.css' %}" type = "text/css"/>
+    <style type="text/css">
+        .land_info{
+            background-color: #4E5D70;
+            display: flex;
+            height: 55vh;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .land_text a{
+            padding: 0.3rem .6rem;
+            display: inline-block;
+            border-radius: 50px;
+            background-color: #333;
+            color:#ccc;
+            font-weight: 500;
+            margin-top: .5rem;
+            transition: background 500ms ease;
+            box-shadow: 0px 5px 3px rgba(0,0,0,0.4),
+                -0px 5px 3px rgba(0,0,0,0.3);
+        }
+        
+        .land_text img{
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+                -5px 5px 5px rgba(0,0,0,0.1);
+        }
+        .land_text a:hover{
+            background-color: #ccc;
+            color: #333;
+        }
+        .land_img{
+            height: 45vh;
+            background-image: url({% static 'personal/image/showcase.jpg' %});
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        
+        @media(min-width:500px){
+            .landing{
+                display: flex;
+                height: 100%;
+            }
+            .land_info{
+                flex: 0 1 40vw;
+                height: 100vh;
+            }
+            .land_img{
+                flex: 0 1 60vw;
+                height: 100vh;
+            }
+        }
+    </style>
+    {% load staticfiles %}
+<link rel="stylesheet" href="{% static 'personal/css/animate.min.css' %}" type = "text/css"/>
+</head>
+
+    
+<body>
+    <div class="container" style="max-width: 900px; margin: auto; padding: 0px; box-shadow: 30px 0px 40px rgba(0 ,0 ,0 , 0.2),-30px 0px 40px rgba(0 ,0 ,0 , 0.2)">
+    <div class="landing">
+       <div class="land_info">
+           <div class="land_text">
+                  <img class="animated zoomIn" src="{% static 'personal/image/prfl.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
+                   <h1 class="" style="font-weight: 500"> me_SRV </h1>
+                   <p class="animated shake">Programming, Teaching, Entrepreneurship</p>
+                    <a class="lead" id="view_work" style="text-decoration: none;" href="#my_work">view more</a>
+           </div>
+            </div>
+        <div class="land_img">
+<!--        <img class="animated zoomIn" src="{% static 'personal/image/showcase.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">-->
+        dassourav237@gmail.com</div>    
+    </div>
+    
+    <div id="my_work" style="height: 100vh;">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href='/'>me_Srv</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link animated slideInLeft" href='/'>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animated slideInRight" href='/blog/'>Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animated slideInLeft" href='/contact/'>Contact</a>
+                </li>
+               
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+       <div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}	
+			</div>
+       
+        </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+    <script>
+    $('#view_work').on('click',function(){
+    const images = $('#my_work').position().top;
+    $('html,body').animate(
+        {
+            scrollTop: images
+        },
+        900
+    );
+});
+    </script>
+
+    
+</body>
+</html>
